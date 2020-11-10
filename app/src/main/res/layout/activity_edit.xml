@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="8dp"
+    tools:context="com.example.inventorymanagement.activities.EditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxHeight="400dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/no_image" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <ImageButton
+                android:id="@+id/new_photo_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_add_a_photo_white_36" />
+
+            <ImageButton
+                android:id="@+id/choose_from_gallery_button"
+                android:src="@drawable/baseline_add_photo_alternate_white_36"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:scaleType="fitXY"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:id="@+id/edit_product_name"
+                android:hint="Product Name"
+                android:inputType="textCapWords"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <EditText
+                android:id="@+id/edit_quantity"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="Quantity"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_price"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="Price"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/text_supplier_details"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Supplier Details"
+                android:layout_marginVertical="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/edit_supplier_name"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Supplier Name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/edit_supplier_phone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:text="Supplier Phone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/categoryLinerLayout"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Category"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="100dp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
